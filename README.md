@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Mini Instagram Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto clone simplificado do Instagram, construído com React e Firebase (Firestore, Auth, Storage).  
+Tem como objetivo aprendizado prático de frontend com React e backend serverless usando Firebase.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Autenticação de usuários (email/senha, Google)  
+- Feed de posts com imagens, legendas e usuários  
+- Upload de imagens para Firebase Storage  
+- Sincronização em tempo real com Firestore  
+- Estrutura modular e limpa usando React Hooks  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias usadas
 
-### `npm test`
+- React  
+- Firebase (Firestore, Authentication, Storage, Functions)  
+- CSS / Tailwind CSS (opcional, depende do seu setup)  
+- NPM para gerenciamento de pacotes  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Como rodar localmente
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório  
+```bash
+git clone https://github.com/seuusuario/seurepositorio.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Entre na pasta do projeto  
+```bash
+cd seurepositorio
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instale as dependências  
+```bash
+npm install
+```
 
-### `npm run eject`
+4. Configure seu Firebase  
+- Crie um projeto no [Firebase Console](https://console.firebase.google.com/)  
+- Copie as credenciais e atualize o arquivo `src/firebase.js` com suas informações:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```js
+const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_AUTH_DOMAIN",
+  projectId: "SEU_PROJECT_ID",
+  storageBucket: "SEU_STORAGE_BUCKET",
+  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+  appId: "SEU_APP_ID"
+};
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Inicie o projeto  
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estrutura do projeto
 
-## Learn More
+```
+/src
+  /components
+    Feed.js       # Componente que lista posts
+    Post.js       # Componente individual do post
+  firebase.js     # Configuração do Firebase
+  App.js          # Entrada do React
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Próximos passos
 
-### Code Splitting
+- Implementar likes e comentários  
+- Melhorar UI/UX com animações e responsividade  
+- Autenticação social (Facebook, Twitter)  
+- Deploy para produção com Firebase Hosting ou Vercel  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Contribuições
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Sugestões para melhoria do código são muito bem-vindas!  
+Sinta-se à vontade para abrir uma issue ou enviar um pull request com correções, ideias ou melhorias. 🚀
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contato
 
-### Advanced Configuration
+Feito por Iago Alves  
+Entre em contato ou contribua com ideias no GitHub!
+Linkdin : https://www.linkedin.com/in/iagoalvesjs/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
