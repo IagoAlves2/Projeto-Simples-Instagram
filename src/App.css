@@ -1,0 +1,231 @@
+/* Reset de margem e padding em todos os elementos para evitar estilos indesejados por padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz com que padding e borda sejam incluídos nas dimensões totais do elemento */
+}
+
+/* Cor de fundo da página */
+body {
+  background-color: #a9a1a1; /* Um tom neutro de cinza para o fundo */
+}
+
+/* Estilo do cabeçalho (header) */
+.header {
+  background-color: white; /* Fundo branco para o cabeçalho */
+  border-bottom: 2px solid black; /* Linha preta fina na parte inferior para separar o cabeçalho do conteúdo */
+}
+
+/* Container central do cabeçalho */
+.center {
+  max-width: 1100px; /* Define a largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 10px; /* Adiciona espaçamento interno */
+  
+  display: flex; /* Usa flexbox para organizar os itens dentro do header */
+  justify-content: space-between; /* Espaço entre os itens do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+/* Logo dentro do cabeçalho */
+.header_logo {
+  display: flex;
+  align-items: center; /* Alinha o logo verticalmente */
+}
+
+/* Formulário de login dentro do cabeçalho */
+.header_loginForm {
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente no centro */
+}
+
+/* Estilo do formulário de login dentro do cabeçalho */
+.header_loginForm form {
+  display: flex; /* Flexbox para os campos de input e submit */
+  gap: 10px; /* Espaço entre os campos de login */
+}
+
+/* Estilo para os campos de texto e senha */
+.header_loginForm input[type="text"],
+.header_loginForm input[type="password"] {
+  padding: 5px;
+  width: 120px; /* Largura específica para os campos de texto */
+  border: 1px solid #ccc; /* Borda sutil */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo para o botão de submit no formulário de login */
+.header_loginForm input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #0095f6; /* Cor azul do Instagram */
+  border: 1px solid #ccc; /* Borda sutil */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+}
+
+/* Estilo do botão "Criar Conta" dentro do formulário de login */
+.header_loginForm .buttonCriarConta {
+  padding: 10px; /* Espaçamento interno do botão */
+}
+
+/* Estilo das informações quando o usuário estiver logado */
+.header_logadoInfo {
+  font-size: auto; /* Define o tamanho da fonte automaticamente */
+  text-align: right; /* Alinha o conteúdo à direita */
+}
+
+/* Estilo do link dentro do "header_logadoInfo" */
+.header_logadoInfo a {
+  margin-left: 10px; /* Espaçamento entre o link e o conteúdo anterior */
+  background-color: #0095f6; /* Cor azul do botão */
+  color: white; /* Cor do texto do link */
+  padding: 3px 10px; /* Espaçamento interno do link */
+  border-radius: 10px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  font-size: 14px; /* Tamanho de fonte do link */
+}
+
+/* Modal para criar conta */
+.modalCriarConta {
+  display: none; /* Inicialmente escondido */
+  position: fixed; /* Fixa o modal no topo da tela */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente atrás do modal */
+}
+
+/* Estilo do formulário dentro do modal de criação de conta */
+.formCriarConta {
+  position: absolute;
+  left: 50%; /* Centraliza horizontalmente */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translate(-50%, -50%); /* Ajusta para centralizar exatamente */
+  background-color: white; /* Fundo branco para o modal */
+  padding: 20px; /* Espaçamento interno */
+  max-width: 700px; /* Largura máxima do formulário */
+  text-align: center; /* Centraliza o conteúdo dentro do modal */
+}
+
+/* Estilo dos campos de input dentro do modal de criação de conta */
+.formCriarConta input {
+  width: 100%;
+  height: 30px; /* Tamanho fixo do campo */
+  margin-bottom: 5px; /* Espaçamento entre os campos */
+  padding-left: 10px; /* Espaçamento interno à esquerda */
+  border: 1px solid #ccc; /* Borda sutil */
+}
+
+/* Estilo do botão de submit dentro do modal de criação de conta */
+.formCriarConta input[type='submit'] {
+  background-color: #0095f6; /* Cor do botão */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Indica que o botão é clicável */
+  color: white; /* Cor do texto */
+}
+
+/* Estilo para o botão de fechar do modal de criação de conta */
+.closeModalCriar {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer; /* Indica que é clicável */
+  width: 30px; /* Tamanho do botão de fechar */
+  text-align: center; /* Centraliza o texto do botão */
+  color: white;
+  line-height: 27px; /* Alinha o texto verticalmente */
+  height: 30px; /* Tamanho fixo do botão */
+  border-radius: 15px; /* Bordas arredondadas */
+  background-color: #0095f6; /* Cor azul do botão */
+}
+
+/* Modal de upload de post */
+.modalUpload {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro atrás do modal */
+}
+
+/* Estilo do formulário dentro do modal de upload */
+.formUpload {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o formulário */
+  background-color: white;
+  padding: 20px;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Estilo dos campos de input dentro do modal de upload */
+.formUpload input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  border: 1px solid #ccc; /* Borda sutil */
+}
+
+/* Estilo do botão de submit dentro do modal de upload */
+.formUpload input[type='submit'] {
+  background-color: #0095f6; /* Cor azul do botão */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Indica que é clicável */
+  color: white; /* Cor do texto */
+}
+
+/* Estilo para o botão de fechar do modal de upload */
+.closeUpload {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer; /* Indica que é clicável */
+  width: 30px;
+  text-align: center; /* Alinha o texto do botão */
+  color: white;
+  line-height: 27px;
+  height: 30px;
+  border-radius: 15px; /* Bordas arredondadas */
+  background-color: #0095f6; /* Cor azul do botão */
+}
+
+/* Estilo para os posts individuais */
+.postSingle {
+  background-color: white;
+  max-width: 700px; /* Limita a largura do post */
+  margin: 10px auto; /* Espaçamento ao redor do post */
+}
+
+/* Estilo para as imagens dos posts */
+.postSingle img {
+  width: 100%; /* A imagem ocupa toda a largura do container */
+}
+
+/* Estilo para os parágrafos dentro de um post */
+.postSingle p {
+  padding: 10px;
+}
+
+/* Estilo para o campo de texto de comentário em um post */
+.postSingle textarea {
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 120px; /* Altura do campo de comentário */
+  border: 1px solid #ccc; /* Borda sutil */
+  padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo para o botão de enviar comentário */
+.postSingle input[type=submit] {
+  background-color: #0095f6; /* Cor do botão */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Indica que o botão é clicável */
+  color: white; /* Cor do texto */
+  border: 0; /* Remove a borda do botão */
+  padding: 8px 10px; /* Espaçamento interno do botão */
+}
